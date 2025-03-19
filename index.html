@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RA Carpincho</title>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe-ar.js@1.8.0/dist/aframe-ar.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+  <a-scene embedded arjs>
+    <!-- Cargar el modelo 3D con A-Frame -->
+    <a-entity gltf-model="url(Carpincho.glb)" scale="2 2 2" position="0 0 0"></a-entity>
+
+    <!-- Agregar un marcador Hiro -->
+    <a-marker preset="hiro">
+      <a-entity gltf-model="url(Carpincho.glb)" scale="2 2 2" position="0 0 0"></a-entity>
+    </a-marker>
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
+</html>
